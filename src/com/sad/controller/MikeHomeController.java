@@ -52,7 +52,7 @@ public class MikeHomeController {
 		for (int i=0; i<week_list.length; i++) {
 			double count = 0;
 			double sum = 0;
-			js += "[g" + week_list[i] +"',";
+			js += "['" + week_list[i] +"',";
 			for (int t=0; t<instructor_list.length; t++) {
 				for (int r=0; r<resultList.size(); r++) {
 					if (resultList.get(r).getUserresponse().contains(instructor_list[t]) && (resultList.get(r).getWeek()==week_list[i])) {

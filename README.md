@@ -22,7 +22,7 @@ allows an administrator to see the responses through data visualizations.
 ### Prerequisites
 ### 
 
-You may run this project at http://surveyanalyticaldas-env.us-east-2.elasticbeanstalk.com/
+You may run this project at http://sadproject.us-east-2.elasticbeanstalk.com/
 
 But if you would like to install and run this project...
 

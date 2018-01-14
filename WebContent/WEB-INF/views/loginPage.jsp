@@ -22,6 +22,9 @@ ${ alert }
       <input type="password" class="form-control" name="password" style="margin-top:3%;"placeholder="Password" required/>
 
       <button class="btn btn-lg btn-primary btn-block background-teal" style="margin-top:10%;" type="submit">Login</button>
+	  </br>
+	  <p>Hint: Username is "root@gmail.com" and Password is "admin"</p>
+    <p>Good luck and please do not abuse this project!</p>
     </form>
   </div>
 
