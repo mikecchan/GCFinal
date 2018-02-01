@@ -10,8 +10,7 @@
 <link
 	href="https://fonts.googleapis.com/css?family=Barlow+Condensed:400,500|Roboto:400,700"
 	rel="stylesheet">
-<link rel='stylesheet'
-	href='webjars/bootstrap/3.2.0/css/bootstrap.min.css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <link href="resources/css/style.css" type="text/css" rel="stylesheet">
 
@@ -56,105 +55,56 @@
 </script>
 </head>
 <body>
-
-
-	<nav class="top navbar navbar-expand-lg navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-header">
-
-				<a class="navbar-brand" href="#"><img
-					style="height: 50px; width: 88px" src="resources/sad_logo.png">
-					<h1 class="logoHeader">SURVEY ANALYTICS DASHBOARD</h1> </a>
-			</div>
-			<div id="navbar" class="navbar-collapse collapse">
-
-				<ul
-					class="nav navbar-nav navbar-right mr-sm                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ">
-					<li class="nav-item dropdown"><a
-						class="nav-link dropdown-toggle" href="profilepage"
-						id="navbarDropdownMenuLink" data-toggle="dropdown"
-						aria-haspopup="true" aria-expanded="false">${ profileName }<span
-							class="caret"></span></a>
-						<div class="dropdown-menu"
-							aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="logout">Log Out</a>
-
-						</div></li>
-				</ul>
-
-			</div>
-			<!--/.nav-collapse -->
-		</div>
-		<!--/.container-fluid -->
-	</nav>
-
-
-
-
+	<%@ include file="dashHeader.jsp" %>
 	<section id="main">
-		<div class="container container-db">
-			<div class="row">
-				<div class="col-md-2 sideMenu left">
-					<div class="list-group">
-						<a href="dashboard" class=" main-color-bg menu-item"> <span
-							class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-							Dashboard
-						</a> <a href="survey" class="menu-item"><span
-							class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-							Surveys <span class="badge"></span></a> <a href="cohort"
-							class=" menu-item "><span class="glyphicon glyphicon-pencil"
-							aria-hidden="true"></span> Cohorts <span class="badge"></span></a> <a
-							href="student" class=" menu-item"><span
-							class="glyphicon glyphicon-user" aria-hidden="true"></span>
-							Students <span class="badge"></span></a>
-					</div>
-
-
-				</div>
-				<div class="col-md-10 content">
-				
-					
-				
-						<div  style="background-color:transparent;">
-								
+		<div class="container-db">
+			<div class="row"> 
+				<%@ include file="sideMenu.jsp" %>
+				<div class="col-md-10 content" style="overflow: scroll">
+							
 								<!-- Chart section -->
-
-
-								<div class="container col-md-12" style=" margin-bottom:10%;">
-								<div class="row"> <div class = "col-xs-12"><h1 class="pageTitle">DASHBOARD</h1> </div></div>
-									<div class="row">
-									<div class = "col-xs-12"><div class="" id="teacher_effect"></div></div>						
-									</div>
-									<br>
-									
-
-									<div class="row">
-										<div class = "col-xs-4" ><div id="confovertime"></div></div>
-										<div class = "col-xs-4" ><div id="howConfID"></div></div>
-										<div class = "col-xs-4" ><div  id="material_pace"></div></div>	
-									</div>
-									<br>
-
-									<div class="row">
-	
-										<div class = "col-xs-4" ><div id="instruEmotions"></div></div>
-										<div class = "col-xs-4" ><div id="jobs_applied"></div></div>
-										<div class = "col-xs-4" ><div id="watsonTestChart"></div></div>
-									</div>
-									<br>
-									<div class="row">
-										
-										<div class = "col-xs-12"><div id="what_make_conf"></div></div>
-										
+								<div class="row"> 
+									<div class = "col-md-12 col-xs-12 col-lg-12">
+										<h1 class="pageTitle">DASHBOARD</h1> 
 									</div>
 								</div>
-						</div>
+								
+								<div class="row"> 
+									<div class = "col-md-12 col-xs-12 col-lg-12" >
+										<div id="teacher_effect"></div>
+									</div>
+								</div>	
+											
+								<br>
+									
+
+								<div class="row">
+									<div class = "col-xs-4 col-md-4 col-lg-4" >
+										<div id="confovertime"></div>
+									</div>
+									<div class = "col-xs-4 col-md-4 col-lg-4" >
+										<div id="howConfID"></div>
+									</div>
+									<div class = "col-xs-4 col-md-4 col-lg-4" >
+										<div id="material_pace"></div>
+									</div>	
+								</div>
+								<br>
+
+								<div class="row">
+
+									<div class = "col-xs-4 col-md-4 col-lg-4" ><div id="instruEmotions"></div></div>
+									<div class = "col-xs-4 col-md-4 col-lg-4" ><div id="jobs_applied"></div></div>
+									<div class = "col-xs-4 col-md-4 col-lg-4" ><div id="watsonTestChart"></div></div>
+								</div>
+								<br>
+								<div class="row">
+									<div class = "col-md-12 col-xs-12 col-lg-12"><div id="what_make_conf"></div></div>
+								</div>
+							</div>
 				</div>
-			</div>
 			<br>
-		
 		</div>
-		
 	</section>
 	
 	<br>

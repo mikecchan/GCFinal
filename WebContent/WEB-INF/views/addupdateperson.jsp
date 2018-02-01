@@ -14,57 +14,12 @@
 <link rel='stylesheet'
 	href='webjars/bootstrap/3.2.0/css/bootstrap.min.css'>
 <link href="resources/css/style.css" type="text/css" rel="stylesheet">
-
-
-
 </head>
 <body>
-
-
-	<nav class="top navbar navbar-expand-lg navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-header">
-
-				<a class="navbar-brand" href="#"><img
-					style="height: 50px; width: 88px" src="resources/sad_logo.png">
-					<h1 class="logoHeader">SURVEY ANALYTICS DASHBOARD</h1> </a>
-			</div>
-			<div id="navbar" class="navbar-collapse collapse">
-
-				<ul
-					class="nav navbar-nav navbar-right mr-sm                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ">
-					<li class="nav-item"><a href="loginPage">Profile</a></li>
-				</ul>
-
-			</div>
-			<!--/.nav-collapse -->
-		</div>
-		<!--/.container-fluid -->
-	</nav>
-
-
-
-
+	<%@ include file="dashHeader.jsp"%>
 	<section id="main">
-		<div class="container container-db">
-			<div class="row">
-				<div class="col-md-2 sideMenu left">
-					<div class="list-group">
-						<a href="dashboard" class=" main-color-bg menu-item"> <span
-							class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-							Dashboard
-						</a> <a href="survey" class="menu-item"><span
-							class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-							Surveys <span class="badge"></span></a> <a href="cohort"
-							class=" menu-item "><span class="glyphicon glyphicon-pencil"
-							aria-hidden="true"></span> Cohorts <span class="badge"></span></a> <a
-							href="student" class=" menu-item"><span
-							class="glyphicon glyphicon-user" aria-hidden="true"></span>
-							Students <span class="badge"></span></a>
-					</div>
-
-
-				</div>
+		<div class="container-db">
+			<%@ include file="sideMenu.jsp"%>
 				<div class="col-md-10 content">
 
 					<!-- <section id="breadcrumb">
@@ -79,7 +34,7 @@
 					<div class="row">
 						<div class="main-pane">
 							<div class="inner-div">
-
+								
 								${addPersonTitle} ${updatePersonTitle} ${addPersonAction}
 								${updatePersonAction} <input type="hidden" name="id"
 									value="${personID}"> First Name: <input type="text"
@@ -92,7 +47,6 @@
 									type="number" min="1" step="any" name="cohortid"> <br>
 								${addPersonButton}${updatePersonButton}
 
-								</form>
 
 
 							</div>
@@ -102,7 +56,6 @@
 
 				</div>
 			</div>
-		</div>
 	</section>
 
 </body>

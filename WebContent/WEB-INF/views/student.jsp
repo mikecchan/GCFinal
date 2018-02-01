@@ -11,8 +11,10 @@
 <link
 	href="https://fonts.googleapis.com/css?family=Barlow+Condensed:400,500|Roboto:400,700"
 	rel="stylesheet">
-<link rel='stylesheet'
-	href='webjars/bootstrap/3.2.0/css/bootstrap.min.css'>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
 <link href="resources/css/style.css" type="text/css" rel="stylesheet">
 
 
@@ -20,52 +22,12 @@
 </head>
 <body>
 
-
-	<nav class="top navbar navbar-expand-lg navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-header">
-
-				<a class="navbar-brand" href="#"><img
-					style="height: 50px; width: 88px" src="resources/sad_logo.png">
-					<h1 class="logoHeader">SURVEY ANALYTICS DASHBOARD</h1> </a>
-			</div>
-			<div id="navbar" class="navbar-collapse collapse">
-
-				<ul
-					class="nav navbar-nav navbar-right mr-sm                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ">
-					<li class="nav-item"><a href="loginPage">Profile</a></li>
-				</ul>
-
-			</div>
-			<!--/.nav-collapse -->
-		</div>
-		<!--/.container-fluid -->
-	</nav>
-
-
-
-
+	<%@ include file="dashHeader.jsp"%>
 	<section id="main">
-		<div class="container container-db">
+		<div class="container-db">
 			<div class="row">
-				<div class="col-md-2 sideMenu left">
-					<div class="list-group">
-						<a href="dashboard" class=" main-color-bg menu-item"> <span
-							class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-							Dashboard
-						</a> <a href="survey" class="menu-item"><span
-							class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-							Surveys <span class="badge"></span></a> <a href="cohort"
-							class=" menu-item "><span class="glyphicon glyphicon-pencil"
-							aria-hidden="true"></span> Cohorts <span class="badge"></span></a> <a
-							href="student" class=" menu-item"><span
-							class="glyphicon glyphicon-user" aria-hidden="true"></span>
-							Students <span class="badge"></span></a>
-					</div>
-
-
-				</div>
-				<div class="col-md-10 content">
+				<%@ include file="sideMenu.jsp"%>
+				<div class="col-md-10 content" style="overflow-y: scroll">
 
 					<!-- <section id="breadcrumb">
 						<div class="container ">
@@ -73,30 +35,30 @@
 								<li class="">Dashboard</li>
 							</ol>
 						</div>
-					</section>
- -->
+					</section>-->
 
 					<div class="row">
 						<div class="main-pane">
 							<div class="inner-div">
 								<h1 class="pageTitle">Students</h1>
 							</div>
-							
-
-
 							<div class="panel-heading"></div>
-							<div class="col-md-9 panel-body">
+							<div class="col-xs-2 col-md-2 col-lg-2 panel-body">
 								<div>
-								<div class="dropdown pull-right">
-								<form action="result" method="post">
-									<select id="cohortSelect" name="cohort" style = "display:inline-block">
-										<option value="All">All</option>
-										<c:forEach var="cohort" items="${listcohorts}"><option value="${cohort}">${cohort}</option></c:forEach>
-			<input type="submit" style = "display:inline-block" value="Search">
-									</select> 
-								</form>
+									<div class="dropdown pull-right">
+										<form action="result" method="post">
+											<select id="cohortSelect" name="cohort"
+												style="display: inline-block">
+												<option value="All">All</option>
+												<c:forEach var="cohort" items="${listcohorts}">
+													<option value="${cohort}">${cohort}</option>
+												</c:forEach>
+												<input type="submit" style="display: inline-block"
+												value="Search">
+											</select>
+										</form>
 
-							</div>
+									</div>
 									<table class="table-striped table-bordered table-hover">
 										<a href="addperson">Add Person</a>
 										<tr>
@@ -125,26 +87,17 @@
 															Delete </a></td>
 													<td><a href="addupdateperson?id=${myVar.personID}">
 															Update </a></td>
-
-
 												</tr>
-
 											</c:forEach>
 										</tbody>
 									</table>
 								</div>
-
-
 							</div>
 						</div>
 					</div>
-
-
 				</div>
 			</div>
 		</div>
 	</section>
 
 </body>
-
-	

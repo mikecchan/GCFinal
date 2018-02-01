@@ -6,11 +6,13 @@
 <title>Login</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <link rel='stylesheet' href='webjars/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <!--<link rel='stylesheet' href='webjars/bootstrap/3.2.0/css/bootstrap.min.css'>  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="resources/css/style.css" type="text/css" rel="stylesheet">
 
 </head>
 <body>
+<div class="container" style="background-color: #FFF;">
 <%@ include file="homeHeader.jsp" %>
 
 ${ alert }
@@ -28,9 +30,8 @@ ${ alert }
     </form>
   </div>
 
-
-
  <script type="text/javascript" src="webjars/jquery/2.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="webjars/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</div>
 </body>
 </html>
